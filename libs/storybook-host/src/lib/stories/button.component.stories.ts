@@ -1,10 +1,9 @@
-import { ButtonComponent } from '@ds-nx-angular-monorepo/button';
-import { Meta, StoryObj } from "@storybook/angular";
+import type { Meta, StoryObj } from "@storybook/angular";
+import { ButtonComponent } from "@ds-nx-angular-monorepo/button";
 
 const meta: Meta<ButtonComponent> = {
-  component: ButtonComponent,
-  title: 'Button'
-};
+  component: ButtonComponent
+}
 
 export default meta;
 
@@ -12,8 +11,87 @@ type Story = StoryObj<ButtonComponent>;
 
 export const PrimaryButton: Story = {
   args: {
-      text: 'Action'
+    text: 'Action',
+    variant: 'primary',
+    disabled: false,
+    theme: 'blue'
   }
 };
 
-export const SecondaryButton: Story = {}
+export const PrimaryButtonDisabled: Story = {
+  args: {
+    ...PrimaryButton.args,
+    disabled: true
+  }
+};
+
+export const SecondaryButton: Story = {
+  args: {
+    ...PrimaryButton.args,
+    variant: 'secondary',
+    disabled: false
+  }
+};
+
+export const SecondaryButtonDisabled: Story = {
+  args: {
+    ...SecondaryButton.args,
+    disabled: true
+  }
+};
+
+export const TertiaryButton: Story = {
+  args: {
+    ...PrimaryButton.args,
+    variant: 'tertiary'
+  }
+}
+
+export const TertiaryButtonDisabled: Story = {
+  args: {
+    ...TertiaryButton.args,
+    disabled: true
+  }
+}
+
+export const PrimaryButtonViolet: Story = {
+  args: {
+    ...PrimaryButton.args,
+    theme: 'violet'
+  }
+};
+
+export const PrimaryButtonDisabledViolet: Story = {
+  args: {
+    ...PrimaryButtonDisabled.args,
+    theme: 'violet'
+  }
+};
+
+export const SecondaryButtonViolet: Story = {
+  args: {
+    ...SecondaryButton.args,
+    theme: 'violet'
+  }
+};
+
+export const SecondaryButtonDisabledViolet: Story = {
+  args: {
+    ...SecondaryButtonDisabled.args,
+    theme: 'violet'
+  }
+}
+
+export const TertiaryButtonViolet: Story = {
+  args: {
+    ...TertiaryButton.args,
+    theme: 'violet'
+  }
+}
+
+export const TertiaryButtonDisabledViolet: Story = {
+  args: {
+    ...TertiaryButtonDisabled.args,
+    theme: 'violet'
+  }
+}
