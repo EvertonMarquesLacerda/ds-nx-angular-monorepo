@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@ds-nx-angular-monorepo/button": ["libs/button/src/index.ts"]
+      "@ds-nx-angular-monorepo/button": ["libs/button/src/index.ts"],
+      "@ds-nx-angular-monorepo/ds-storybook": [
+        "libs/storybook-host/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
