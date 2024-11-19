@@ -1,19 +1,18 @@
 {
-  "scripts": {
-    "build": "style-dictionary build && nx build tokens"
-  },
-  "name": "@angular-monorepo/tokens",
-  "version": "0.1.0",
+  "name": "@ds-nx-angular-monorepo/tokens",
+  "version": "0.2.0",
   "dependencies": {
     "tslib": "^2.3.0"
   },
   "type": "commonjs",
-  "main": "./dist/index.js",
-  "style": "/dist/tokens.css",
+  "main": "./dist/libs/tokens/index.js",
+  "style": "./dist/libs/tokens/tokens.css",
   "files": [
-    "dist"
+    "dist/libs/tokens/**/*",
+    "src/**/*",
+    "README.md"
   ],
-  "typings": "./src/index.d.ts",
+  "typings": "./dist/libs/tokens/index.d.ts",
   "publishConfig": {
     "access": "public"
   }

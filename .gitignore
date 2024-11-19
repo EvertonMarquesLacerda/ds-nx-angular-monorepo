@@ -5,6 +5,8 @@ dist
 tmp
 /out-tsc
 
+**/storybook-host/documentation.json
+
 # dependencies
 node_modules
 
