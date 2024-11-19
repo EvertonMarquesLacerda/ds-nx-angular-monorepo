@@ -2,7 +2,8 @@ import type { Meta, StoryObj } from "@storybook/angular";
 import { ButtonComponent } from "@ds-nx-angular-monorepo/button";
 
 const meta: Meta<ButtonComponent> = {
-  component: ButtonComponent
+  component: ButtonComponent,
+  title: 'Button'
 }
 
 export default meta;
